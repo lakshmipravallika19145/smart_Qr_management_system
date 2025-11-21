@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^api/qr/location/([0-9]{16})$ get_qr_details.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^qr.php/([0-9]{16})(/location)?$ qr.php [QSA,L]
